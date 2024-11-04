@@ -42,7 +42,7 @@
      margin-left: 35px;
      transition: .3s;
      opacity: 0;
-     animation: sliderTop 0.5s ease forwards; /* Corrected */
+     animation: sliderTop 0.5s ease forwards; 
      animation-delay: calc(.2s * var(--i));
  }
  .navbar a:hover{
