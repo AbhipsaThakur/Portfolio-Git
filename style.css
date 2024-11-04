@@ -48,4 +48,113 @@
  .navbar a:hover{
      color: #0ef;
  }
+
+ /*home*/
+ .home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: none; /* Remove any existing background image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #fff;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-weight: 700;
+    font-size: 32px;
+    opacity: 0;
+    animation: sliderBottom 1s ease forwards; /* Corrected */
+    animation-delay: 0.7s; /* Added delay for smoother appearance */
+}
+
+.home-content h3:nth-of-type(2){
+      margin-bottom: 30px;
+      animation: sliderTop 0.5s ease forwards;
+      animation-delay: .7s;
+
+}
+
+.home-content h3 span{
+     color: #0ef;
+}
+
+.home-content p {
+    margin-top: 15px;
+    font-size: 1em;
+    animation: sliderLeft 1s ease forwards; /* Apply sliderLeft animation */
+    animation-delay: 1.5s; /* Adjust delay for staggered appearance */
+}
+
+.home::after {
+    content: "";
+    background: url('img/my2-removebg-preview.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 40%;
+    height: 100%;
+    z-index: -1; /* Keeps it behind the content */
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    margin-top: 40px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.home-sci a:hover{
+    background: #0ef;
+    cursor: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 30px;
+    opacity: 0;
+    animation: sliderTop 0.5s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
  
